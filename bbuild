@@ -1,0 +1,6 @@
+#!/bin/sh
+git clean -dfx \
+ && rm -f ned_1.*.*.orig.tar.gz  ned-1.*.*.tar.gz \
+ && uscan -dd \
+ && cd ned-1.*.* \
+ && debuild

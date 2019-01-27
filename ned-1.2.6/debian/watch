@@ -1,0 +1,4 @@
+version=4
+opts="filenamemangle=s/(?:.*)release\.(\d+\.\d+\.\d+)\.tar\.gz/ned-$1.tar.gz/" \
+ https://github.com/nevdelap/ned/tags .+/archive\/release\.(\d+\.\d+\.\d+)\.tar\.gz \
+ uupdate

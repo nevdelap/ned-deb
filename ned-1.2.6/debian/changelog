@@ -1,0 +1,47 @@
+ned (1.2.6-0ubuntu8) cosmic; urgency=low
+
+  * Setting CARGO_HOME.
+
+ -- Nev Delap <nevdelap@gmail.com>  Tue, 31 Jan 2019 20:15:25 +0000
+
+ned (1.2.6-0ubuntu7) cosmic; urgency=low
+
+  * Third experiment with setting a temporary home directory.
+
+ -- Nev Delap <nevdelap@gmail.com>  Tue, 31 Jan 2019 17:18:25 +0000
+
+ned (1.2.6-0ubuntu6) cosmic; urgency=low
+
+  * Second experiment with setting a temporary home directory.
+
+ -- Nev Delap <nevdelap@gmail.com>  Tue, 31 Jan 2019 17:01:25 +0000
+
+ned (1.2.6-0ubuntu5) cosmic; urgency=low
+
+  * There was no 5. I inadvertently skipped it.
+
+ -- Nev Delap <nevdelap@gmail.com>  Tue, 31 Jan 2019 17:01:25 +0000
+
+ned (1.2.6-0ubuntu4) cosmic; urgency=low
+
+  * Put back lock. Experiment with setting a temporary home directory.
+
+ -- Nev Delap <nevdelap@gmail.com>  Tue, 31 Jan 2019 14:03:25 +0000
+
+ned (1.2.6-0ubuntu3) cosmic; urgency=low
+
+  * Experiment with removing --locked.
+
+ -- Nev Delap <nevdelap@gmail.com>  Tue, 30 Jan 2019 21:50:25 +0000
+
+ned (1.2.6-0ubuntu2) cosmic; urgency=low
+
+  * Add cargo as a separate dependency.
+
+ -- Nev Delap <nevdelap@gmail.com>  Tue, 30 Jan 2019 21:31:25 +0000
+
+ned (1.2.6-0ubuntu1) cosmic; urgency=low
+
+  * Initial release.
+
+ -- Nev Delap <nevdelap@gmail.com>  Sun, 27 Jan 2019 12:14:25 +0000

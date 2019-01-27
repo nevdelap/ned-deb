@@ -1,0 +1,18 @@
+Source: ned
+Section: utils
+Priority: optional
+Maintainer: Nev Delap <nevdelap@gmail.com>
+Build-Depends: debhelper (>=11~), rustc (>=1.30.0), cargo (>=0.31.0)
+Standards-Version: 4.1.4
+Homepage: https://github.com/nevdelap/ned
+Vcs-Git: https://github.com/nevdelap/ned.git
+Vcs-Browser: https://github.com/nevdelap/ned
+
+Package: ned
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Like grep with replace, unlike sed, not only line oriented.
+ For regular expression power users, ned is like grep,
+ but with powerful replace capabilities, and more powerful
+ than sed, as it isn't restricted to line oriented editing.
