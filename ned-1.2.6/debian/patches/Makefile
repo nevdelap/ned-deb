@@ -1,11 +1,11 @@
 Description: Makefile for debuild.
  Upstream does not use a Makefile.
  .
- ned (1.2.6-0ubuntu4) cosmic; urgency=low
+ ned (1.2.6-0) cosmic; urgency=low
  .
    * Initial release.
 Author: Nev Delap <nevdelap@gmail.com>
-Last-Update: 2019-01-27
+Last-Update: 2019-01-31
 
 --- /dev/null
 +++ ned-1.2.6/Makefile
@@ -17,18 +17,18 @@ Last-Update: 2019-01-27
 +build: target/release/ned
 +
 +target/release/ned: Cargo.* src/*.rs
-+	CARGO_HOME=`mktemp -d` cargo build --release --locked
++	PATH="/home/nev/.cargo/bin:$$PATH" cargo build --release --target `uname -p`-unknown-linux-musl --locked
 +
 +.PHONY: test
 +
 +test:
-+	CARGO_HOME=`mktemp -d` cargo test --release --locked
++	PATH="/home/nev/.cargo/bin:$$PATH" cargo test --release --target `uname -p`-unknown-linux-musl --locked
 +
 +install: target/release/ned
-+	$(INSTALL) -s -Dm755 target/release/ned $(DESTDIR)$(prefix)/bin/ned
++	$(INSTALL) -s -Dm755 target/`uname -p`-unknown-linux-musl/release/ned $(DESTDIR)$(prefix)/bin/ned
 +
 +uninstall:
 +	-rm $(DESTDIR)$(prefix)/bin/ned
 +
 +clean:
-+	cargo clean --release
++	PATH="/home/nev/.cargo/bin:$$PATH" cargo clean --release --target `uname -p`-unknown-linux-musl

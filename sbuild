@@ -5,6 +5,4 @@ git clean -dfx \
  && cd ned-1.*.* \
  && debuild -k05ECA9EE -S \
  && cd .. \
- && gpg --verify ned_1.2.6-0ubuntu*_source.changes \
- && dput ppa:nevdelap/ned ned_1.*.*-0ubuntu*_source.changes \
- && cd ned-1.*.*
+ && gpg --verify ned_1.2.6*_source.changes

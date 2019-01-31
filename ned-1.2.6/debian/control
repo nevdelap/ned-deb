@@ -2,7 +2,7 @@ Source: ned
 Section: utils
 Priority: optional
 Maintainer: Nev Delap <nevdelap@gmail.com>
-Build-Depends: debhelper (>=11~), rustc (>=1.30.0), cargo (>=0.31.0)
+Build-Depends: debhelper (>=11~)
 Standards-Version: 4.1.4
 Homepage: https://github.com/nevdelap/ned
 Vcs-Git: https://github.com/nevdelap/ned.git
