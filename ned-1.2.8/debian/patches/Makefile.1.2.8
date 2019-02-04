@@ -1,0 +1,20 @@
+Description: Makefile for debuild.
+ Add installing the man page.
+ .
+ ned (1.2.8-0) cosmic; urgency=low
+ .
+   * Add installing the man page.
+Author: Nev Delap <nevdelap@gmail.com>
+Last-Update: 2019-01-31
+
+--- ned-1.2.8/Makefile
++++ ned-1.2.8/Makefile
+@@ -14,6 +14,8 @@ test:
+
+ install: target/release/ned
+ 	$(INSTALL) -s -Dm755 target/`uname -p`-unknown-linux-musl/release/ned $(DESTDIR)$(prefix)/bin/ned
++	gzip < man/ned.1 > man/ned.1.gz
++	$(INSTALL) -Dm644 man/ned.1.gz $(DESTDIR)$(prefix)/share/man/man1/ned.1.gz
+
+ uninstall:
+ 	-rm $(DESTDIR)$(prefix)/bin/ned

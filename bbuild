@@ -5,4 +5,4 @@ git clean -dfx \
  && cd ned-1.*.* \
  && debuild -k05ECA9EE \
  && cd .. \
- && gpg --verify ned_1.2.6_*.deb
+ && gpg --verify ned_1.*.deb
