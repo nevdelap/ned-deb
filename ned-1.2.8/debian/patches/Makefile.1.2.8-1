@@ -1,0 +1,30 @@
+Description: Updated to build in a docker container.
+ .
+ ned (1.2.8-1) unstable; urgency=low
+ .
+   * Updated to build in a docker container.
+Author: Nev Delap <nevdelap@gmail.com>
+
+--- ned-1.2.8.orig/Makefile
++++ ned-1.2.8/Makefile
+@@ -5,12 +5,12 @@ prefix = /usr
+ build: target/release/ned
+
+ target/release/ned: Cargo.* src/*.rs
+-	PATH="/home/nev/.cargo/bin:$$PATH" cargo build --release --target `uname -p`-unknown-linux-musl --locked
++	PATH=~/.cargo/bin:$$PATH cargo build --release --target `uname -p`-unknown-linux-musl --locked
+
+ .PHONY: test
+
+ test:
+-	PATH="/home/nev/.cargo/bin:$$PATH" cargo test --release --target `uname -p`-unknown-linux-musl --locked
++	PATH=~/.cargo/bin:$$PATH cargo test --release --target `uname -p`-unknown-linux-musl --locked
+
+ install: target/release/ned
+ 	$(INSTALL) -s -Dm755 target/`uname -p`-unknown-linux-musl/release/ned $(DESTDIR)$(prefix)/bin/ned
+@@ -21,4 +21,4 @@ uninstall:
+ 	-rm $(DESTDIR)$(prefix)/bin/ned
+
+ clean:
+-	PATH="/home/nev/.cargo/bin:$$PATH" cargo clean --release --target `uname -p`-unknown-linux-musl
++	PATH=~/.cargo/bin:$$PATH cargo clean --release --target `uname -p`-unknown-linux-musl
