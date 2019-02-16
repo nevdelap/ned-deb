@@ -1,8 +1,6 @@
 #!/bin/sh
-git clean -dfx \
- && rm -f ned_1.*.*.orig.tar.gz  ned-1.*.*.tar.gz \
- && uscan -dd \
- && cd ned-1.*.* \
- && debuild -k05ECA9EE \
- && cd .. \
- && gpg --verify ned_1.*.deb
+rm -f ned-1*.tar.gz ned_1* ned-1*/man/ned.1.gz
+rm -rf ned-1*/target
+uscan -dd || exit 1
+cd ned-1*
+debuild -b -us -uc

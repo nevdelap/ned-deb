@@ -1,3 +1,9 @@
+ned (1.2.8-1) unstable; urgency=low
+
+  * Updated to build in a docker container.
+
+ -- Nev Delap <nevdelap@gmail.com>  Mon, 16 Feb 2019 20:34:00 +0000
+
 ned (1.2.8-0) unstable; urgency=low
 
   * Update to 1.2.8.
