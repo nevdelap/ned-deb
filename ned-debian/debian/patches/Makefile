@@ -8,7 +8,7 @@ Author: Nev Delap <nevdelap@gmail.com>
 Last-Update: 2019-01-31
 
 --- /dev/null
-+++ ned-1.2.8/Makefile
++++ ./Makefile
 @@ -0,0 +1,22 @@
 +# Makefile for deb package build.
 +

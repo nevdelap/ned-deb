@@ -1,6 +1,9 @@
 #!/bin/sh
-rm -f ned-1*.tar.gz ned_1* ned-1*/man/ned.1.gz
-rm -rf ned-1*/target
-uscan -dd || exit 1
-cd ned-1*
+VERSION="1.2.9"
+rm -f ned-1*.tar.gz ned_1* ned-1*/man/ned.1.gz && \
+rm -rf ned-release.1* && \
+curl -sL "https://github.com/nevdelap/ned/archive/refs/tags/release.$VERSION.tar.gz" | tar xz -C ./ && \
+cd ned-release.1* && \
+ln -s ../ned-debian/debian debian && \
+uscan -dd && \
 debuild -b -us -uc

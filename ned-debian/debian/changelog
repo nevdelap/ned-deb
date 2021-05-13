@@ -1,0 +1,37 @@
+ned (1.2.9-1) bionic; urgency=low
+
+  * Issue 52: Stop searching if the output stream is closed.
+  * Issue 75: Make stdin imply --stdout.
+  * Issue 83: Update regex to 1.4.*.
+  * Shortcut testing included/excluded file when it's a directory.
+  * Build with latest Rust.
+  ** Removed deprecated Error::description().
+  ** Fix newer clippy suggestions.
+  ** Fix markdown lint suggestions.
+  ** Fix deprecated trait objects without dyn.
+
+ --  Nev Delap <nevdelap@gmail.com>  Mon, 10 May 2021 19:20:00 +0000
+
+ned (1.2.8-1) unstable; urgency=low
+
+  * Updated to build in a docker container.
+
+ --  <nevdelap@gmail.com>  Mon, 16 Feb 2019 20:34:00 +0000
+
+ned (1.2.8-0) unstable; urgency=low
+
+  * Update to 1.2.8.
+
+ --  <nevdelap@gmail.com>  Mon, 04 Feb 2019 21:41:00 +0000
+
+ned (1.2.7-0) unstable; urgency=low
+
+  * Update to 1.2.7.
+
+ --  <nevdelap@gmail.com>  Sat, 02 Feb 2019 22:04:00 +0000
+
+ned (1.2.6-0) unstable; urgency=low
+
+  * Initial release.
+
+ --  <nevdelap@gmail.com>  Thu, 31 Jan 2019 22:13:00 +0000

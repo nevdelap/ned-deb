@@ -5,8 +5,8 @@ Description: Updated to build in a docker container.
    * Updated to build in a docker container.
 Author: Nev Delap <nevdelap@gmail.com>
 
---- ned-1.2.8.orig/Makefile
-+++ ned-1.2.8/Makefile
+--- ./Makefile
++++ ./Makefile
 @@ -5,12 +5,12 @@ prefix = /usr
  build: target/release/ned
 
